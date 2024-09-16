@@ -17,9 +17,18 @@ for ($i = 0; $i < count($list_query); $i++) {
                 $ex = explode("|", $task[$a]);
                 echo "[-] ".$ex[1]."\n";
                 echo "\t[>] Start Task : ".start($ex[0], $auth)."\n";
-                sleep(3);
                 echo "\t[>] Verify Task : ".verify($ex[0], $auth)."\n";
-                sleep(20);
+            }
+            sleep(15);
+            for ($b = 0; $b < count($task); $b++) {
+                $ex = explode("|", $task[$b]);
+                echo "[-] ".$ex[1]."\n";
+                echo "\t[>] Solve Task : ".solve_task($ex[0], $auth)."\n";
+            }
+            sleep(15);
+            for ($b = 0; $b < count($task); $b++) {
+                $ex = explode("|", $task[$b]);
+                echo "[-] ".$ex[1]."\n";
                 echo "\t[>] Solve Task : ".solve_task($ex[0], $auth)."\n";
             }
         }
