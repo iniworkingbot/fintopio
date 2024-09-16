@@ -20,12 +20,14 @@ for ($i = 0; $i < count($list_query); $i++) {
                 echo "\t[>] Verify Task : ".verify($ex[0], $auth)."\n";
             }
             sleep(15);
+            $task = get_task($auth);
             for ($b = 0; $b < count($task); $b++) {
                 $ex = explode("|", $task[$b]);
                 echo "[-] ".$ex[1]."\n";
                 echo "\t[>] Solve Task : ".solve_task($ex[0], $auth)."\n";
             }
             sleep(15);
+            $task = get_task($auth);
             for ($b = 0; $b < count($task); $b++) {
                 $ex = explode("|", $task[$b]);
                 echo "[-] ".$ex[1]."\n";
